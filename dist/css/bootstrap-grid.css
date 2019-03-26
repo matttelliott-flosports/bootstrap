@@ -15,6 +15,9 @@ html {
   box-sizing: inherit;
 }
 
+/*--------------------------------------------------------
+Typography & Font Colors
+--------------------------------------------------------*/
 .container {
   width: 100%;
   padding-right: 15px;
@@ -3382,4 +3385,5 @@ html {
     margin-left: auto !important;
   }
 }
+
 /*# sourceMappingURL=bootstrap-grid.css.map */

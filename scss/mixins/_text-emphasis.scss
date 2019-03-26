@@ -14,3 +14,17 @@
     }
   }
 }
+
+
+@mixin svg-emphasis-variant($parent, $color) {
+  #{$parent} {
+    fill: $color !important;
+  }
+  @if $emphasized-link-hover-darken-percentage != 0 {
+    a#{$parent} {
+      @include hover-focus {
+        fill: darken($color, $emphasized-link-hover-darken-percentage) !important;
+      }
+    }
+  }
+}

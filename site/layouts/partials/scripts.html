@@ -1,19 +1,76 @@
 {{ if eq (getenv "HUGO_ENV") "production" -}}
-  <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/bootstrap.bundle.min.js" integrity="{{ .Site.Params.cdn.js_bundle_hash }}" crossorigin="anonymous"></script>
+<script
+  src="/docs/{{ .Site.Params.docs_version }}/dist/js/bootstrap.bundle.min.js"
+  integrity="{{ .Site.Params.cdn.js_bundle_hash }}"
+  crossorigin="anonymous"
+></script>
 {{ else -}}
-  <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/bootstrap.bundle.js"></script>
-{{- end }}
-
-{{ if eq .Page.Layout "docs" -}}
+<script src="/docs/{{ .Site.Params.docs_version }}/dist/js/bootstrap.bundle.js"></script>
+{{- end }} {{ if eq .Page.Layout "docs" -}}
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-{{- end }}
-
-{{- if eq (getenv "HUGO_ENV") "production" -}}
-  <script src="/docs/{{ .Site.Params.docs_version }}/assets/js/docs.min.js"></script>
+{{- end }} {{- if eq (getenv "HUGO_ENV") "production" -}}
+<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/docs.min.js"></script>
 {{- else -}}
-  <script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/anchor.min.js"></script>
-  <script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/clipboard.min.js"></script>
-  <script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/bs-custom-file-input.min.js"></script>
-  <script src="/docs/{{ .Site.Params.docs_version }}/assets/js/src/application.js"></script>
-  <script src="/docs/{{ .Site.Params.docs_version }}/assets/js/src/search.js"></script>
+<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/anchor.min.js"></script>
+<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/clipboard.min.js"></script>
+<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/bs-custom-file-input.min.js"></script>
+<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/src/application.js"></script>
+<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/src/search.js"></script>
 {{- end -}}
+
+<script>
+  const params = new URL(document.location).searchParams
+  const site = params.get('site')
+  console.log(site)
+  const bodyElement = document.querySelector('body')
+  const primaryColor = window
+    .getComputedStyle(bodyElement)
+    .getPropertyValue(`--${site}`)
+  const styleElement = document.createElement('style')
+  if (site) {
+    const styles = `
+.btn-primary {
+  background-color: var(--${site});
+  border-color: var(--${site});
+}
+
+.btn-primary:hover {
+  border-color: var(--${site}-darken-10);
+}
+.btn-outline-primary {
+  color: var(--${site});
+  border-color: var(--${site});
+}
+
+.btn-outline-primary:hover {
+  border-color: var(--${site}-darken-10);
+}
+
+a {
+  color: var(--${site});
+}
+
+.alert-primary {
+  color: var(--${site}-alert-color);
+  background-color: var(--${site}-alert-bg);
+  border-color: var(--${site}-alert-border);
+}
+
+.svg-primary,
+.svg-primary > svg,
+.svg-primary > svg path {
+  fill: var(--${site});
+}
+
+.bg-primary {
+  background-color: var(--${site}) !important;
+}
+
+.text-primary {
+  color: var(--${site}) !important;
+}
+`
+    styleElement.innerText = styles
+    bodyElement.appendChild(styleElement)
+  }
+</script>

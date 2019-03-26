@@ -72,6 +72,10 @@
   @return map-get($theme-colors, $key);
 }
 
+@function site-color($key: "flodogs") {
+  @return map-get($site-colors, $key);
+}
+
 @function gray($key: "100") {
   @return map-get($grays, $key);
 }
@@ -79,6 +83,14 @@
 // Request a theme color level
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+@function site-color-level($color-name: "flodogs", $level: 0) {
+  $color: site-color($color-name);
   $color-base: if($level > 0, $black, $white);
   $level: abs($level);
 

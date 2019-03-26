@@ -45,6 +45,34 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
+$flosoftball: #00a9e0 !default;
+$flofc: #00b74f !default;
+$florugby: #00b74f !default;
+$flocombat: #00b74f !default;
+$flograppling: #00b74f !default;
+$flovolleyball: #00b74f !default;
+$flomarching: #00b74f !default;
+$flogymnastics: #307fe2 !default;
+$varsity: #307fe2 !default;
+$floswimming: #307fe2 !default;
+$flohockey: #307fe2 !default;
+$florodeo: #307fe2 !default;
+$flovoice: #307fe2 !default;
+$flowrestling: #84bd00 !default;
+$flocheer: #ac4fc6 !default;
+$milesplit: #c80000 !default;
+$flotrack: #e4002b !default;
+$floracing: #e4002b !default;
+$flofootball: #e4002b !default;
+$flobowling: #e4002b !default;
+$flodogs: #ff8200 !default;
+$floelite: #ff8200 !default;
+$flohoops: #ff8200 !default;
+$flolive: #ff8200 !default;
+$flodance: #ff8200 !default;
+$flobikes: #ff8200 !default;
+
+
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
@@ -72,7 +100,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         $gray-500 !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
@@ -86,9 +114,71 @@ $theme-colors: map-merge(
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
-    "dark":       $dark
+    "dark":       $dark,
+    "flosoftball": $flosoftball,
+    "flocombat": $flocombat,
+    "flograppling": $flograppling,
+    "flovolleyball": $flovolleyball,
+    "flomarching": $flomarching,
+    "flogymnastics": $flogymnastics,
+    "varsity": $varsity,
+    "floswimming": $floswimming,
+    "flowrestling": $flowrestling,
+    "milesplit": $milesplit,
+    "flotrack": $flotrack,
+    "flodogs": $flodogs,
+    "floelite": $floelite,
+    "flohoops": $flohoops,
+    "flocheer": $flocheer,
+    "flohockey": $flohockey,
+    "florodeo": $florodeo,
+    "floracing": $floracing,
+    "flovoice": $flovoice,
+    "florugby": $florugby,
+    "flolive": $flolive,
+    "flodance": $flodance,
+    "flobikes": $flobikes,
+    "flofootball": $flofootball,
+    "flobowling": $flobowling,
+    "flofc": $flofc
   ),
   $theme-colors
+);
+
+
+
+$site-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$site-colors: map-merge(
+  (
+    "flosoftball": $flosoftball,
+    "flocombat": $flocombat,
+    "flograppling": $flograppling,
+    "flovolleyball": $flovolleyball,
+    "flomarching": $flomarching,
+    "flogymnastics": $flogymnastics,
+    "varsity": $varsity,
+    "floswimming": $floswimming,
+    "flowrestling": $flowrestling,
+    "milesplit": $milesplit,
+    "flotrack": $flotrack,
+    "flodogs": $flodogs,
+    "floelite": $floelite,
+    "flohoops": $flohoops,
+    "flocheer": $flocheer,
+    "flohockey": $flohockey,
+    "florodeo": $florodeo,
+    "floracing": $floracing,
+    "flovoice": $flovoice,
+    "florugby": $florugby,
+    "flolive": $flolive,
+    "flodance": $flodance,
+    "flobikes": $flobikes,
+    "flofootball": $flofootball,
+    "flobowling": $flobowling,
+    "flofc": $flofc
+  ),
+  $site-colors
 );
 
 // Set a specific jump point for requesting color jumps
@@ -107,7 +197,7 @@ $yiq-text-light:            $white !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                                true !default;
-$enable-rounded:                              true !default;
+$enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
@@ -115,8 +205,8 @@ $enable-prefers-reduced-motion-media-query:   true !default;
 $enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
 $enable-grid-classes:                         true !default;
 $enable-pointer-cursor-for-buttons:           true !default;
-$enable-print-styles:                         true !default;
-$enable-responsive-font-sizes:                false !default;
+$enable-print-styles:                         false !default;
+$enable-responsive-font-sizes:                true !default;
 $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
@@ -230,7 +320,7 @@ $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
 $border-width:                1px !default;
-$border-color:                $gray-300 !default;
+$border-color:                $gray-800 !default;
 
 $border-radius:               .25rem !default;
 $border-radius-lg:            .3rem !default;
@@ -269,11 +359,25 @@ $embed-responsive-aspect-ratios: join(
 //
 // Font, line-height, and color for body text, headings, and more.
 
+// Flosports Typography (fonts)
+$primary-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$mono-font: 'Eurostile', 'Open Sans', Helvetica, Arial, sans-serif !default;
+$header-font: 'Industry-Demi-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
+$subheader-font: 'Industry-Medium-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
+$section-header-font: 'Industry-Bold-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
+$railheader-book: 'Industry-Book-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
+$light-font: 'Industry-Light-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
+$ultra-font: 'Industry-Ultra-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
+
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:      $primary-font-family !default;
+$font-family-monospace:       $mono-font !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
+
+/*--------------------------------------------------------
+Typography & Font Colors
+--------------------------------------------------------*/
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
@@ -296,7 +400,7 @@ $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
-$headings-font-family:        null !default;
+$headings-font-family:        $header-font !default;
 $headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
@@ -382,7 +486,7 @@ $table-border-level:          -6 !default;
 
 $input-btn-padding-y:         .375rem !default;
 $input-btn-padding-x:         .75rem !default;
-$input-btn-font-family:       null !default;
+$input-btn-font-family:       $ultra-font !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
