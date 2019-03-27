@@ -30,3 +30,19 @@
     z-index: $zindex-sticky;
   }
 }
+
+.bottom {
+  bottom: 0 !important;
+}
+
+.top {
+  top: 0 !important;
+}
+
+.left {
+  left: 0 !important;
+}
+
+.right {
+  right: 0 !important;
+}

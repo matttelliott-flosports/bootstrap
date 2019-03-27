@@ -235,33 +235,27 @@ Typography & Font Colors
 }
 
 .bd-content > h2 {
-  font-size: 2rem;
-}
-
-@media (max-width: 1200px) {
-  .bd-content > h2 {
-    font-size: calc(1.325rem + 0.9vw) ;
-  }
-}
-
-.bd-content > h3 {
-  font-size: 1.75rem;
-}
-
-@media (max-width: 1200px) {
-  .bd-content > h3 {
-    font-size: calc(1.3rem + 0.6vw) ;
-  }
-}
-
-.bd-content > h4 {
   font-size: 1.5rem;
 }
 
 @media (max-width: 1200px) {
-  .bd-content > h4 {
+  .bd-content > h2 {
     font-size: calc(1.275rem + 0.3vw) ;
   }
+}
+
+.bd-content > h3 {
+  font-size: 1.3125rem;
+}
+
+@media (max-width: 1200px) {
+  .bd-content > h3 {
+    font-size: calc(1.25625rem + 0.075vw) ;
+  }
+}
+
+.bd-content > h4 {
+  font-size: 1.125rem;
 }
 
 .bd-content > h2:not(:first-child) {
@@ -1211,7 +1205,7 @@ Typography & Font Colors
 
 .swatch-light {
   color: #212529;
-  background-color: #adb5bd;
+  background-color: #e9ecef;
 }
 
 .swatch-dark {
