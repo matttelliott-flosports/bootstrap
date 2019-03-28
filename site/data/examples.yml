@@ -2,7 +2,9 @@
   description: "FloSports pages"
   examples:
     - name: Home
-      description: "FloSports Homepage"
+      description: "Home"
+    - name: Articles
+      description: "Articles"
 
 - category: Custom Components
   description: "Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."

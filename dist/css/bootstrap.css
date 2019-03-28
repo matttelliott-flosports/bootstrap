@@ -362,14 +362,14 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #212529;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #007bff;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -5300,17 +5300,17 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #007bff;
+  color: #212529;
   text-decoration: none;
 }
 
 .btn-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #007bff;
+  text-decoration: none;
 }
 
 .btn-link:focus, .btn-link.focus {
-  text-decoration: underline;
+  text-decoration: none;
   box-shadow: none;
 }
 
@@ -6951,14 +6951,14 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #007bff;
+  color: #212529;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
   z-index: 2;
-  color: #0056b3;
+  color: #007bff;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;

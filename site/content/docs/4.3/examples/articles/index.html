@@ -1,6 +1,6 @@
 ---
 layout: examples
-title: FloSports Homepage
+title: FloSports Articles page
 extra_css:
   - 'styles.css'
 ---
@@ -20,8 +20,8 @@ extra_css:
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item text-uppercase">
-            <a class="nav-link" href="/docs/4.3/examples/articles">Articles</a>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase text-white" href="/docs/4.3/examples/articles">Articles</a>
           </li>
           <li class="nav-item text-uppercase">
             <a class="nav-link" href="#">Events</a>
@@ -43,13 +43,12 @@ extra_css:
         <span class="text-light m-2">share</span>
         <div class="dropdown bg-light">
           <a
-            class="nav-link font-weight-bold"
+            class="nav-link dropdown-toggle"
             href="#"
             id="navbarDropdown"
             role="button"
             data-toggle="dropdown"
             aria-expanded="false"
-            style="transform: rotate(90deg);"
           >
             :-)
           </a>
@@ -67,11 +66,7 @@ extra_css:
   <nav class="navbar bg-primary d-lg-none">
     <ul class="list-inline">
       <li class="nav-item list-inline-item">
-        <a
-          class="nav-link text-uppercase text-white"
-          href="/docs/4.3/examples/articles"
-          >Articles</a
-        >
+        <a class="nav-link text-uppercase text-white" href="/docs/4.3/examples/articles">Articles</a>
       </li>
       <li class="nav-item text-uppercase list-inline-item">
         <a class="nav-link text-white" href="#">Events</a>
@@ -102,24 +97,18 @@ extra_css:
     <div class="row">
       <div class="col-lg-8 border-right border-light">
         <div class="row border-bottom border-light">
-          <a
-            href="#"
-            class="col-lg-7 p-3 border-right border-light"
-          >
+          <div class="col-lg-7 p-3 border-right border-light">
+            <h1>Julian Alaphilippe Claims First Monument At Milan-San Remo</h1>
+            <a href="#">View Full 2019 Milano-San Remo Coverage</a>
+            <date class="small text-muted">Mar 26, 2019</date>
             <div class="position-relative">
               <img
                 class="img-fluid"
                 src="https://d2hj1hh0fn56bc.cloudfront.net/5c9a6277e9965.png?width=850&quality=80"
                 alt="cobbles.png"
               />
-              <i
-                class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                >|></i
-              >
             </div>
-            <h1>Matej Mohoric Is Ready For The Cobbles</h1>
-            <date class="small text-muted">Mar 26, 2019</date>
-          </a>
+          </div>
           <div class="col-lg-5 p-3">
             <h6 class="border-bottom text-uppercase">Trending</h6>
             <ul class="list-group">
@@ -144,13 +133,11 @@ extra_css:
           </div>
         </div>
 
+        <ul class="list-group">
           <li class="list-group-item w-100">
             <div class="row justify-content-between">
               <h6 class="border-bottom text-uppercase w-100">Headlines</h6>
-              <a
-                href="#"
-                class="col-sm pl-0"
-              >
+              <div class="col-sm pl-0">
                 <div class="position-relative">
                   <img
                     class="img-fluid"
@@ -163,11 +150,8 @@ extra_css:
                   >
                 </div>
                 <h3>Tour Of Flanders Trivia + Beer</h3>
-              </a>
-              <a
-                href="#"
-                class="col-sm pr-0"
-              >
+              </div>
+              <div class="col-sm pr-0">
                 <div class="position-relative">
                   <img
                     class="img-fluid"
@@ -183,91 +167,88 @@ extra_css:
                   <span class="badge text-uppercase bg-dark">Pro</span>
                   Race Replay: Milan-San Remo
                 </h3>
-              </a>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item d-flex row border-top border-light p-3">
+            <div class="col-md-4 p-1">
+              <div class="position-relative">
+                <img
+                  class="img-fluid"
+                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c965e8d82f0f.png?width=660&quality=80"
+                  alt="Milan-SanRemo.png"
+                />
+                <i
+                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
+                  >|></i
+                >
+              </div>
+            </div>
+            <div class="col-md-8 py-0">
+              <h5 class="p-0 m-0">
+                <span class="badge bg-dark text-uppercase">Pro</span>
+                Race Replay: Milan-San Remo
+              </h5>
+              <date class="text-muted d-block">Mar 24, 2019</date>
+              <p>
+                The 2019 Milan-San Remo covered 291km between Milan and San Remo
+              </p>
+            </div>
+          </li>
+          <li class="list-group-item d-flex row border-top border-light p-3">
+            <div class="col-md-4 p-1">
+              <div class="position-relative">
+                <img
+                  class="img-fluid"
+                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c9677ad7ccca.png?width=660&quality=80"
+                  alt="Sagan.png"
+                />
+                <i
+                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
+                  >|></i
+                >
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h5>
+                Sagan: Quick Step, Alaphilippe Too Strong in MSR Final
+              </h5>
+              <date class="text-muted d-block">Mar 24, 2019</date>
+              <p>
+                Peter Sagan did everything right to put himself in position to
+                win his first Milan-San Remo, until the final few hundred meters
+              </p>
+            </div>
+          </li>
+          <li class="list-group-item d-flex row border-top border-light p-3">
+            <div class="col-md-4 p-1">
+              <div class="position-relative">
+                <img
+                  class="img-fluid"
+                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c96850376fec.png?width=660&quality=80"
+                  alt="Sagan.png"
+                />
+                <i
+                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
+                  >|></i
+                >
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h5>
+                Viviani Told Quick Step To Race For Alaphilippe
+              </h5>
+              <date class="text-muted d-block">Mar 24, 2019</date>
+              <p>
+                Elia Viviani says poor positioning ruined his chances of victory
+                in Milan-San Remo, but he remains impressed by his teammate
+                Julian Alaphilippe.
+              </p>
             </div>
           </li>
 
           <li class="list-group-item d-flex row border-top border-light p-3">
-            <a class="col-md-4 p-1" href="#">
-              <div class="position-relative">
-                <img
-                  class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c965e8d82f0f.png?width=660&quality=80"
-                  alt="Milan-SanRemo.png"
-                />
-                <i
-                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                  >|></i
-                >
-              </div>
-            </a>
-            <a href="#" class="col-md-8 py-0">
-              <h5 class="p-0 m-0">
-                <span class="badge bg-dark text-uppercase">Pro</span>
-                Race Replay: Milan-San Remo
-              </h5>
-              <date class="text-muted d-block">Mar 24, 2019</date>
-              <p>
-                The 2019 Milan-San Remo covered 291km between Milan and San Remo
-              </p>
-            </a>
-          </li>
-
-          <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
-              <div class="position-relative">
-                <img
-                  class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c9677ad7ccca.png?width=660&quality=80"
-                  alt="Sagan.png"
-                />
-                <i
-                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                  >|></i
-                >
-              </div>
-            </a>
-            <a href="#" class="col-md-8">
-              <h5>
-                Sagan: Quick Step, Alaphilippe Too Strong in MSR Final
-              </h5>
-              <date class="text-muted d-block">Mar 24, 2019</date>
-              <p>
-                Peter Sagan did everything right to put himself in position to
-                win his first Milan-San Remo, until the final few hundred meters
-              </p>
-            </a>
-          </li>
-
-          <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
-              <div class="position-relative">
-                <img
-                  class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c96850376fec.png?width=660&quality=80"
-                  alt="Sagan.png"
-                />
-                <i
-                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                  >|></i
-                >
-              </div>
-            </a>
-            <a href="#" class="col-md-8">
-              <h5>
-                Viviani Told Quick Step To Race For Alaphilippe
-              </h5>
-              <date class="text-muted d-block">Mar 24, 2019</date>
-              <p>
-                Elia Viviani says poor positioning ruined his chances of victory
-                in Milan-San Remo, but he remains impressed by his teammate
-                Julian Alaphilippe.
-              </p>
-            </a>
-          </li>
-
-          <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
+            <div class="col-md-4 p-1">
               <div class="position-relative">
                 <img
                   class="img-fluid"
@@ -279,8 +260,8 @@ extra_css:
                   >|></i
                 >
               </div>
-            </a>
-            <a href="#" class="col-md-8">
+            </div>
+            <div class="col-md-8">
               <h5>
                 Final 10K: Milan-San Remo
               </h5>
@@ -291,17 +272,12 @@ extra_css:
                 The 2019 Milan-San Remo covered 291km between Milan and San
                 Remo.
               </p>
-            </a>
+            </div>
           </li>
 
           <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
+            <div class="col-md-4 p-1">
               <div class="position-relative">
-                <div
-                  class="bg-translucent position-absolute top left h-100 w-100 text-white"
-                >
-                  overlay
-                </div>
                 <img
                   class="img-fluid"
                   src="https://d2hj1hh0fn56bc.cloudfront.net/5c965d7f39004.png?width=660&quality=80"
@@ -312,8 +288,8 @@ extra_css:
                   >|></i
                 >
               </div>
-            </a>
-            <a href="#" class="col-md-8">
+            </div>
+            <div class="col-md-8">
               <h5>
                 The 2019 Milan-San Remo covered 291km between Milan and San
                 Remo.
@@ -326,41 +302,15 @@ extra_css:
                 stage 2 of the 2019 Tirreno-Adriatico, we talked to pro riders
                 about the young Frenchman.
               </p>
-            </a>
+            </div>
           </li>
 
           <li class="list-group-item d-flex row border-top border-light p-3">
-            <a class="col-md-4 p-1" href="#">
+            <div class="col-md-4 p-1">
               <div class="position-relative">
                 <img
                   class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c965e8d82f0f.png?width=660&quality=80"
-                  alt="Milan-SanRemo.png"
-                />
-                <i
-                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                  >|></i
-                >
-              </div>
-            </a>
-            <a href="#" class="col-md-8 py-0">
-              <h5 class="p-0 m-0">
-                <span class="badge bg-dark text-uppercase">Pro</span>
-                Race Replay: Milan-San Remo
-              </h5>
-              <date class="text-muted d-block">Mar 24, 2019</date>
-              <p>
-                The 2019 Milan-San Remo covered 291km between Milan and San Remo
-              </p>
-            </a>
-          </li>
-
-          <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
-              <div class="position-relative">
-                <img
-                  class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c9677ad7ccca.png?width=660&quality=80"
+                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c966c8e9b369.png?width=660&quality=80"
                   alt="Sagan.png"
                 />
                 <i
@@ -368,113 +318,26 @@ extra_css:
                   >|></i
                 >
               </div>
-            </a>
-            <a href="#" class="col-md-8">
+            </div>
+            <div class="col-md-8">
               <h5>
-                Sagan: Quick Step, Alaphilippe Too Strong in MSR Final
-              </h5>
-              <date class="text-muted d-block">Mar 24, 2019</date>
-              <p>
-                Peter Sagan did everything right to put himself in position to
-                win his first Milan-San Remo, until the final few hundred meters
-              </p>
-            </a>
-          </li>
-
-          <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
-              <div class="position-relative">
-                <img
-                  class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c96850376fec.png?width=660&quality=80"
-                  alt="Sagan.png"
-                />
-                <i
-                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                  >|></i
-                >
-              </div>
-            </a>
-            <a href="#" class="col-md-8">
-              <h5>
-                Viviani Told Quick Step To Race For Alaphilippe
-              </h5>
-              <date class="text-muted d-block">Mar 24, 2019</date>
-              <p>
-                Elia Viviani says poor positioning ruined his chances of victory
-                in Milan-San Remo, but he remains impressed by his teammate
-                Julian Alaphilippe.
-              </p>
-            </a>
-          </li>
-
-          <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
-              <div class="position-relative">
-                <img
-                  class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c965a9d029a6.png?width=660&quality=80"
-                  alt="Sagan.png"
-                />
-                <i
-                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                  >|></i
-                >
-              </div>
-            </a>
-            <a href="#" class="col-md-8">
-              <h5>
-                Final 10K: Milan-San Remo
+                Race Recap: Poggio Provides Drama In Milan-San Remo Final
               </h5>
               <date class="text-muted d-block">
                 Mar 23, 2019
               </date>
               <p>
-                The 2019 Milan-San Remo covered 291km between Milan and San
-                Remo.
+                A breakaway group of ten riders, representing second-division
+                teams invited by the organisers, had opened the road right out
+                of Milan.
               </p>
-            </a>
-          </li>
-
-          <li class="list-group-item d-flex row border-top border-light p-3">
-            <a href="#" class="col-md-4 p-1">
-              <div class="position-relative">
-                <div
-                  class="bg-translucent position-absolute top left h-100 w-100 text-white"
-                >
-                  overlay
-                </div>
-                <img
-                  class="img-fluid"
-                  src="https://d2hj1hh0fn56bc.cloudfront.net/5c965d7f39004.png?width=660&quality=80"
-                  alt="Sagan.png"
-                />
-                <i
-                  class="text-white play-icon bg-primary p-2 position-absolute bottom left"
-                  >|></i
-                >
-              </div>
-            </a>
-            <a href="#" class="col-md-8">
-              <h5>
-                The 2019 Milan-San Remo covered 291km between Milan and San
-                Remo.
-              </h5>
-              <date class="text-muted d-block">
-                Mar 23, 2019
-              </date>
-              <p>
-                After Julian Alaphilippe took another impressive victory in
-                stage 2 of the 2019 Tirreno-Adriatico, we talked to pro riders
-                about the young Frenchman.
-              </p>
-            </a>
+            </div>
           </li>
         </ul>
       </div>
       <div class="col-lg-4 p-3 h-100">
         <h6 class="border-bottom text-uppercase">
-          Events<a class="float-right text-primary" href="#">View All Events</a>
+          Events<a class="float-right text-primary">View All Events</a>
         </h6>
         <div class="list-group mh-25">
           <div
@@ -496,7 +359,7 @@ extra_css:
             </date>
             <div class="col-md-10">
               Milano-san Remo
-              <a href="" class="d-block text-primary">View Full Coverage</a>
+              <a href="" class="d-block">View Full Coverage</a>
             </div>
           </div>
           <div
