@@ -1213,6 +1213,16 @@ Typography & Font Colors
   background-color: #343a40;
 }
 
+.swatch-white {
+  color: #212529;
+  background-color: #fff;
+}
+
+.swatch-black {
+  color: #fff;
+  background-color: #000;
+}
+
 .swatch-flosoftball {
   color: #fff;
   background-color: #00a9e0;
