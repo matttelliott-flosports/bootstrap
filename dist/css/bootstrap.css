@@ -30,7 +30,8 @@ Typography & Font Colors
   --light: #e9ecef;
   --dark: #343a40;
   --white: #fff;
-  --black: #000;
+  --black: #212529;
+  --tint: rgba(0, 0, 0, 0.5);
   --flosoftball: #00a9e0;
   --flocombat: #00b74f;
   --flograppling: #00b74f;
@@ -1879,23 +1880,45 @@ pre code {
 .table-black,
 .table-black > th,
 .table-black > td {
-  background-color: #b8b8b8;
+  background-color: #c1c2c3;
 }
 
 .table-black th,
 .table-black td,
 .table-black thead th,
 .table-black tbody + tbody {
-  border-color: #7a7a7a;
+  border-color: #8c8e90;
 }
 
 .table-hover .table-black:hover {
-  background-color: #ababab;
+  background-color: #b4b5b6;
 }
 
 .table-hover .table-black:hover > td,
 .table-hover .table-black:hover > th {
-  background-color: #ababab;
+  background-color: #b4b5b6;
+}
+
+.table-tint,
+.table-tint > th,
+.table-tint > td {
+  background-color: rgba(226, 226, 226, 0.86);
+}
+
+.table-tint th,
+.table-tint td,
+.table-tint thead th,
+.table-tint tbody + tbody {
+  border-color: rgba(187, 187, 187, 0.74);
+}
+
+.table-hover .table-tint:hover {
+  background-color: rgba(213, 213, 213, 0.86);
+}
+
+.table-hover .table-tint:hover > td,
+.table-hover .table-tint:hover > th {
+  background-color: rgba(213, 213, 213, 0.86);
 }
 
 .table-flosoftball,
@@ -3408,36 +3431,70 @@ fieldset:disabled a.btn {
 
 .btn-black {
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #212529;
+  border-color: #212529;
 }
 
 .btn-black:hover {
   color: #fff;
-  background-color: black;
-  border-color: black;
+  background-color: #101214;
+  border-color: #0a0c0d;
 }
 
 .btn-black:focus, .btn-black.focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 38, 38, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(66, 70, 73, 0.5);
 }
 
 .btn-black.disabled, .btn-black:disabled {
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #212529;
+  border-color: #212529;
 }
 
 .btn-black:not(:disabled):not(.disabled):active, .btn-black:not(:disabled):not(.disabled).active,
 .show > .btn-black.dropdown-toggle {
   color: #fff;
-  background-color: black;
-  border-color: black;
+  background-color: #0a0c0d;
+  border-color: #050506;
 }
 
 .btn-black:not(:disabled):not(.disabled):active:focus, .btn-black:not(:disabled):not(.disabled).active:focus,
 .show > .btn-black.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 38, 38, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(66, 70, 73, 0.5);
+}
+
+.btn-tint {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-tint:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-tint:focus, .btn-tint.focus {
+  box-shadow: 0 0 0 0.2rem rgba(88, 88, 88, 0.5);
+}
+
+.btn-tint.disabled, .btn-tint:disabled {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-tint:not(:disabled):not(.disabled):active, .btn-tint:not(:disabled):not(.disabled).active,
+.show > .btn-tint.dropdown-toggle {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-tint:not(:disabled):not(.disabled):active:focus, .btn-tint:not(:disabled):not(.disabled).active:focus,
+.show > .btn-tint.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(88, 88, 88, 0.5);
 }
 
 .btn-flosoftball {
@@ -4613,34 +4670,66 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-black {
-  color: #000;
-  border-color: #000;
+  color: #212529;
+  border-color: #212529;
 }
 
 .btn-outline-black:hover {
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #212529;
+  border-color: #212529;
 }
 
 .btn-outline-black:focus, .btn-outline-black.focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
 }
 
 .btn-outline-black.disabled, .btn-outline-black:disabled {
-  color: #000;
+  color: #212529;
   background-color: transparent;
 }
 
 .btn-outline-black:not(:disabled):not(.disabled):active, .btn-outline-black:not(:disabled):not(.disabled).active,
 .show > .btn-outline-black.dropdown-toggle {
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #212529;
+  border-color: #212529;
 }
 
 .btn-outline-black:not(:disabled):not(.disabled):active:focus, .btn-outline-black:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-black.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+}
+
+.btn-outline-tint {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-tint:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-tint:focus, .btn-outline-tint.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-tint.disabled, .btn-outline-tint:disabled {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+
+.btn-outline-tint:not(:disabled):not(.disabled):active, .btn-outline-tint:not(:disabled):not(.disabled).active,
+.show > .btn-outline-tint.dropdown-toggle {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-tint:not(:disabled):not(.disabled):active:focus, .btn-outline-tint:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-tint.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
 }
 
@@ -7335,13 +7424,23 @@ input[type="button"].btn-block {
 }
 
 .alert-black {
-  color: black;
-  background-color: #cccccc;
-  border-color: #b8b8b8;
+  color: #111315;
+  background-color: #d3d3d4;
+  border-color: #c1c2c3;
 }
 
 .alert-black .alert-link {
   color: black;
+}
+
+.alert-tint {
+  color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(235, 235, 235, 0.9);
+  border-color: rgba(226, 226, 226, 0.86);
+}
+
+.alert-tint .alert-link {
+  color: rgba(0, 0, 0, 0.74);
 }
 
 .alert-flosoftball {
@@ -7940,19 +8039,35 @@ input[type="button"].btn-block {
 }
 
 .list-group-item-black {
-  color: black;
-  background-color: #b8b8b8;
+  color: #111315;
+  background-color: #c1c2c3;
 }
 
 .list-group-item-black.list-group-item-action:hover, .list-group-item-black.list-group-item-action:focus {
-  color: black;
-  background-color: #ababab;
+  color: #111315;
+  background-color: #b4b5b6;
 }
 
 .list-group-item-black.list-group-item-action.active {
   color: #fff;
-  background-color: black;
-  border-color: black;
+  background-color: #111315;
+  border-color: #111315;
+}
+
+.list-group-item-tint {
+  color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(226, 226, 226, 0.86);
+}
+
+.list-group-item-tint.list-group-item-action:hover, .list-group-item-tint.list-group-item-action:focus {
+  color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(213, 213, 213, 0.86);
+}
+
+.list-group-item-tint.list-group-item-action.active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.74);
+  border-color: rgba(0, 0, 0, 0.74);
 }
 
 .list-group-item-flosoftball {
@@ -9210,7 +9325,11 @@ a.close.disabled {
 }
 
 .bg-black {
-  background-color: #000 !important;
+  background-color: #212529 !important;
+}
+
+.bg-tint {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .bg-flosoftball {
@@ -9325,10 +9444,6 @@ a.close.disabled {
   background-color: transparent !important;
 }
 
-.bg-translucent {
-  background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
 .border {
   border: 1px solid #343a40 !important;
 }
@@ -9406,7 +9521,11 @@ a.close.disabled {
 }
 
 .border-black {
-  border-color: #000 !important;
+  border-color: #212529 !important;
+}
+
+.border-tint {
+  border-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .border-flosoftball {
@@ -12599,11 +12718,19 @@ a.text-white:hover, a.text-white:focus {
 }
 
 .text-black {
-  color: #000 !important;
+  color: #212529 !important;
 }
 
 a.text-black:hover, a.text-black:focus {
   color: black !important;
+}
+
+.text-tint {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+a.text-tint:hover, a.text-tint:focus {
+  color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .text-flosoftball {
@@ -12887,11 +13014,19 @@ a.svg-white:hover, a.svg-white:focus {
 }
 
 .svg-black {
-  fill: #000 !important;
+  fill: #212529 !important;
 }
 
 a.svg-black:hover, a.svg-black:focus {
   fill: black !important;
+}
+
+.svg-tint {
+  fill: rgba(0, 0, 0, 0.5) !important;
+}
+
+a.svg-tint:hover, a.svg-tint:focus {
+  fill: rgba(0, 0, 0, 0.5) !important;
 }
 
 .svg-flosoftball {

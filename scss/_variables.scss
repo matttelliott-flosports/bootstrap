@@ -16,6 +16,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
+$tint:    rgba(0, 0, 0, .5) !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -116,7 +117,8 @@ $theme-colors: map-merge(
     "light":      $light,
     "dark":       $dark,
     "white":      $white,
-    "black":       $black,
+    "black":       $gray-900,
+    "tint":       $tint,
     "flosoftball": $flosoftball,
     "flocombat": $flocombat,
     "flograppling": $flograppling,
