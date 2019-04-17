@@ -1,6 +1,6 @@
 languageCode:           "en"
-title:                  "Bootstrap"
-baseURL:                "https://getbootstrap.com"
+title:                  "FloSports - Bootstrap"
+baseURL:                "https://bootstrap.flosports.tv"
 enableInlineShortcodes: true
 
 pygmentsUseClasses:     true
@@ -27,28 +27,30 @@ staticDir:              "site/static"
 themesDir:              "site/themes"
 
 params:
-  description:          "The most popular HTML, CSS, and JS library in the world."
-  authors:              "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+  description:          "Based on The most popular HTML, CSS, and JS library in the world."
+  authors:              "FloSports, Inc"
   social_image_path:    /docs/4.3/assets/brand/bootstrap-social.png
   social_logo_path:     /docs/4.3/assets/brand/bootstrap-social-logo.png
 
   current_version:      "4.3.1"
   current_ruby_version: "4.3.1"
   docs_version:         "4.3"
-  repo:                 "https://github.com/twbs/bootstrap"
-  twitter:              "getbootstrap"
-  slack:                "https://bootstrap-slack.herokuapp.com"
-  blog:                 "https://blog.getbootstrap.com"
+  repo:                 "https://github.com/matttelliott-flosports/bootstrap"
+  floangular:           "https://github.com/flocasts/flo-angular"
+  twitter:              "flosports"
+  slack:                "https://flosports.slack.com"
+  blog:                 "https://flodogs.com"
+  jira:                 "https://flocasts.atlassian.net/secure/Dashboard.jspa"
   expo:                 "https://expo.getbootstrap.com"
   themes:               "https://themes.getbootstrap.com"
 
   download:
-    source:             "https://github.com/twbs/bootstrap/archive/v4.3.1.zip"
-    dist:               "https://github.com/twbs/bootstrap/releases/download/v4.3.1/bootstrap-4.3.1-dist.zip"
+    source:             "https://github.com/matttelliott-flosports/bootstrap/archive/v4.3.1.zip"
+    dist:               "https://github.com/matttelliott-flosports/bootstrap/releases/download/v4.3.1/bootstrap-4.3.1-dist.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    css:              "https://github.com/matttelliott-bootstrap/bootstrap/4.3.1/css/bootstrap.min.css"
     css_hash:         "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     js_hash:          "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"

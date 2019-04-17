@@ -1,5 +1,5 @@
 <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-black">
-  <a class="navbar-brand mr-0 mr-md-2 svg-primary" href="/" aria-label="Bootstrap">
+  <a class="navbar-brand mr-0 mr-md-2 svg-primary" style="width:36px" href="/" aria-label="Bootstrap">
     {{ partial "icons/flosports.svg" (dict "class" "d-block" "width" "36" "height" "36") }}
   </a>
 
@@ -47,7 +47,27 @@
 
     <li class="nav-item">
       <a class="nav-link p-2" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
-        {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
+        {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg text-flowrestling" "width" "36" "height" "36") }}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="{{ .Site.Params.floangular }}" target="_blank" rel="noopener" aria-label="GitHub">
+        {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg text-flograppling" "width" "36" "height" "36") }}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2 text-flobikes" href="{{ .Site.Params.jira }}" target="_blank" rel="noopener" aria-label="GitHub">
+        JIRA
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2 text-flogymnastics" href="{{ .Site.Params.confluence }}" target="_blank" rel="noopener" aria-label="GitHub">
+        Confluence
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2 text-flocheer" href="{{ .Site.Params.zepplin }}" target="_blank" rel="noopener" aria-label="GitHub">
+        Zepplin
       </a>
     </li>
     <li class="nav-item">
@@ -58,11 +78,6 @@
     <li class="nav-item">
       <a class="nav-link p-2" href="{{ .Site.Params.slack }}/" target="_blank" rel="noopener" aria-label="Slack">
         {{ partial "icons/slack.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link p-2" href="{{ .Site.Params.opencollective }}/" target="_blank" rel="noopener" aria-label="Open Collective">
-        {{ partial "icons/opencollective.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
       </a>
     </li>
   </ul>
