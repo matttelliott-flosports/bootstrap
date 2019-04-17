@@ -74,3 +74,12 @@ a:hover {
     bodyElement.appendChild(styleElement)
   }
 </script>
+
+<script>
+  function toggleIframe(element) {
+    const link = element.querySelector('a')
+    const iframeContainer = document.querySelector('.iframe-container')
+    console.log(iframeContainer)
+    iframeContainer.addClass('hidden')
+  }
+</script>
