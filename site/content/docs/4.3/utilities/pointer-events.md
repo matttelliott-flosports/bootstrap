@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Pointer events
+title: Pointer events (FloSports)
 description: Control pointer-events
 group: utilities
 ---
