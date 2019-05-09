@@ -54,6 +54,7 @@ Hover
 {{< /example >}}
 
 Click
+
 {{< example >}}
 <label for="click-toggle-input-top" type="button" class="btn btn-primary">Click Me</label>
 <input class="click-toggle-input d-none" type="checkbox" id="click-toggle-input-top">
