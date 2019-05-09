@@ -7703,6 +7703,48 @@ input[type="button"].btn-block {
   color: #002c13;
 }
 
+.tabs-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+label.tab-label {
+  height: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: -1px;
+  margin-bottom: 0px;
+}
+
+label.tab-label:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.tab-content {
+  width: 100%;
+  margin-top: -1px;
+  padding: 1rem 0 1rem 0;
+  border-top: 0.1em solid #e9ecef;
+  -webkit-order: 1;
+  order: 1;
+}
+
+.tab-content, input.tab-input {
+  display: none;
+}
+
+input.tab-input:checked + label.tab-label {
+  border-bottom: 0.1em solid #007bff;
+}
+
+input.tab-input:checked + label.tab-label + .tab-content {
+  display: block;
+}
+
 @keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0;
@@ -8763,7 +8805,6 @@ a.close.disabled {
 .tooltip {
   position: absolute;
   z-index: 1070;
-  display: block;
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -8781,10 +8822,7 @@ a.close.disabled {
   line-break: auto;
   font-size: 0.65625rem;
   word-wrap: break-word;
-  opacity: 0;
-}
-
-.tooltip.show {
+  pointer-events: none;
   opacity: 0.9;
 }
 
@@ -9686,6 +9724,33 @@ a.close.disabled {
   content: "";
 }
 
+.click-toggle-inline,
+.click-toggle-inline-block,
+.click-toggle-flex,
+.click-toggle-block {
+  display: none;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-block,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-block {
+  display: block;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-flex,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-flex {
+  display: flex;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-inline,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline {
+  display: inline;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-inline-block,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline-block {
+  display: inline-block;
+}
+
 .d-none {
   display: none !important;
 }
@@ -10529,6 +10594,33 @@ a.close.disabled {
   .float-xl-none {
     float: none !important;
   }
+}
+
+.hover-toggle-inline,
+.hover-toggle-inline-block,
+.hover-toggle-flex,
+.hover-toggle-block {
+  display: none;
+}
+
+.hover-target:hover .hover-toggle-block,
+.hover-target:hover ~ .hover-toggle-block {
+  display: block;
+}
+
+.hover-target:hover .hover-toggle-flex,
+.hover-target:hover ~ .hover-toggle-flex {
+  display: flex;
+}
+
+.hover-target:hover .hover-toggle-inline,
+.hover-target:hover ~ .hover-toggle-inline {
+  display: inline;
+}
+
+.hover-target:hover .hover-toggle-inline-block,
+.hover-target:hover ~ .hover-toggle-inline-block {
+  display: inline-block;
 }
 
 .overflow-auto {

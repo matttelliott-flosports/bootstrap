@@ -1,0 +1,26 @@
+.click-toggle-inline,
+.click-toggle-inline-block,
+.click-toggle-flex,
+.click-toggle-block {
+  display: none;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-block,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-block {
+  display: block;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-flex,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-flex {
+  display: flex;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-inline,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline {
+  display: inline;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-inline-block,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline-block {
+  display: inline-block;
+}

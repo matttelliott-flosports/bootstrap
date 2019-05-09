@@ -2,7 +2,6 @@
 .tooltip {
   position: absolute;
   z-index: $zindex-tooltip;
-  display: block;
   margin: $tooltip-margin;
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
@@ -10,9 +9,8 @@
   @include font-size($tooltip-font-size);
   // Allow breaking very long words so they don't overflow the tooltip's bounds
   word-wrap: break-word;
-  opacity: 0;
-
-  &.show { opacity: $tooltip-opacity; }
+  pointer-events: none;
+  opacity: $tooltip-opacity;
 
   .tooltip-arrow {
     position: absolute;
@@ -113,3 +111,4 @@
   background-color: $tooltip-bg;
   @include border-radius($tooltip-border-radius);
 }
+

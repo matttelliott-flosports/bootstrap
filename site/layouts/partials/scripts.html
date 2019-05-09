@@ -69,6 +69,11 @@ a:hover {
 .text-primary {
   color: var(--${site}) !important;
 }
+
+input.tab-input:checked + label.tab-label {
+  border-bottom-color: var(--${site});
+}
+
 `
     styleElement.innerText = styles
     bodyElement.appendChild(styleElement)

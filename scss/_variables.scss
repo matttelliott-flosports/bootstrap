@@ -367,10 +367,6 @@ $embed-responsive-aspect-ratios: join(
 $primary-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $mono-font: 'Eurostile', 'Open Sans', Helvetica, Arial, sans-serif !default;
 $header-font: 'Industry-Demi-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
-$subheader-font: 'Industry-Medium-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
-$section-header-font: 'Industry-Bold-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
-$railheader-book: 'Industry-Book-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
-$light-font: 'Industry-Light-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
 $ultra-font: 'Industry-Ultra-Web', 'Open Sans', Helvetica, Arial, sans-serif !default;
 
 // stylelint-disable value-keyword-case
@@ -1187,6 +1183,14 @@ $spinner-width-sm:        1rem !default;
 $spinner-height-sm:       $spinner-width-sm !default;
 $spinner-border-width-sm: .2em !default;
 
+
+// Tabs
+
+$tab-content-padding-x: 0;
+$tab-content-padding-y: 1rem;
+$tab-border-width: .1em;
+$tab-border-color: $light;
+$tab-label-padding: 1rem;
 
 // Close
 

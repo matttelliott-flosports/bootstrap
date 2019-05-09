@@ -6,36 +6,16 @@ group: components
 toc: true
 ---
 
-## Overview
-
-Things to know when using the tooltip plugin:
-
-- Tooltips rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for tooltips to work!
-- If you're building our JavaScript from source, it [requires `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
-- Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
-- Tooltips with zero-length titles are never displayed.
-- Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
-- Triggering tooltips on hidden elements will not work.
-- Tooltips for `.disabled` or `disabled` elements must be triggered on a wrapper element.
-- When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
-- Tooltips must be hidden before their corresponding elements have been removed from the DOM.
-- Tooltips can be triggered thanks to an element inside a shadow DOM.
-
-{{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
-{{< /callout >}}
-
-Got all that? Great, let's see how they work with some examples.
-
-## Example: Enable tooltips everywhere
+## Example
 
 One way to initialize all tooltips on a page would be to select them by their `data-toggle` attribute:
 
-{{< highlight js >}}
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-{{< /highlight >}}
+{{< example >}}
+
+<button type="button" class="btn btn-primary">What's this?</button>
+<div class="tooltip">Get Reminded</div>
+
+{{< /example >}}
 
 ## Examples
 

@@ -28,6 +28,9 @@
 @import "../../../../../../scss/variables";
 @import "../../../../../../scss/mixins";
 
+// import custom components
+@import "../../../../../../scss/tabs";
+
 // Load docs components
 @import "variables";
 @import "nav";
