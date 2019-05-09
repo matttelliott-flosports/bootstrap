@@ -10654,6 +10654,14 @@ input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline-block {
   right: 0 !important;
 }
 
+.pointer-events-all {
+  pointer-events: all;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

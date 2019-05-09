@@ -59,7 +59,7 @@
     - title: Borders
     - title: Clearfix
     - title: Close icon
-    - title: Click Toggle
+    - title: Click toggle
     - title: Colors
     - title: Display
     - title: Embed
@@ -68,6 +68,7 @@
     - title: Hover
     - title: Overflow
     - title: Position
+    - title: Pointer events
     - title: Screen readers
     - title: Shadows
     - title: Sizing
