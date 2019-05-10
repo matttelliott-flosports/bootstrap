@@ -1,0 +1,6 @@
+# www.robotstxt.org
+
+
+User-agent: *
+Disallow: /
+Sitemap: https://getbootstrap.com/sitemap.xml
