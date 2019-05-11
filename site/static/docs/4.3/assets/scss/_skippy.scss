@@ -6,7 +6,7 @@
   background-color: $primary;
   outline: 0;
 
-  @include hover {
+  &:hover {
     color: $white;
   }
 }

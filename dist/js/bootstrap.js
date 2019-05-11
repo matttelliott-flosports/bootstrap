@@ -436,7 +436,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): dom/eventHandler.js
+   * Bootstrap (v4.3.1): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -524,10 +524,8 @@
       delegationSelector = null;
     }
 
-    var uidList = Object.keys(events);
-
-    for (var i = 0; i < uidList.length; i++) {
-      var uid = uidList[i];
+    for (var _i = 0, _Object$keys = Object.keys(events); _i < _Object$keys.length; _i++) {
+      var uid = _Object$keys[_i];
       var event = events[uid];
 
       if (event.originalHandler === handler && event.delegationSelector === delegationSelector) {
@@ -729,7 +727,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): dom/selectorEngine.js
+   * Bootstrap (v4.3.1): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1479,7 +1477,8 @@
         return;
       }
 
-      var direction = absDeltax / this.touchDeltaX; // swipe left
+      var direction = absDeltax / this.touchDeltaX;
+      this.touchDeltaX = 0; // swipe left
 
       if (direction > 0) {
         this.prev();
@@ -5146,7 +5145,9 @@
         EventHandler.trigger(_this._element, Event$b.SHOWN);
 
         if (_this._config.autohide) {
-          _this.hide();
+          _this._timeout = setTimeout(function () {
+            _this.hide();
+          }, _this._config.delay);
         }
       };
 
@@ -5163,7 +5164,7 @@
       }
     };
 
-    _proto.hide = function hide(withoutTimeout) {
+    _proto.hide = function hide() {
       var _this2 = this;
 
       if (!this._element.classList.contains(ClassName$a.SHOW)) {
@@ -5172,12 +5173,20 @@
 
       EventHandler.trigger(this._element, Event$b.HIDE);
 
-      if (withoutTimeout) {
-        this._close();
+      var complete = function complete() {
+        _this2._element.classList.add(ClassName$a.HIDE);
+
+        EventHandler.trigger(_this2._element, Event$b.HIDDEN);
+      };
+
+      this._element.classList.remove(ClassName$a.SHOW);
+
+      if (this._config.animation) {
+        var transitionDuration = getTransitionDurationFromElement(this._element);
+        EventHandler.one(this._element, TRANSITION_END, complete);
+        emulateTransitionEnd(this._element, transitionDuration);
       } else {
-        this._timeout = setTimeout(function () {
-          _this2._close();
-        }, this._config.delay);
+        complete();
       }
     };
 
@@ -5206,28 +5215,8 @@
       var _this3 = this;
 
       EventHandler.on(this._element, Event$b.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
-        return _this3.hide(true);
+        return _this3.hide();
       });
-    };
-
-    _proto._close = function _close() {
-      var _this4 = this;
-
-      var complete = function complete() {
-        _this4._element.classList.add(ClassName$a.HIDE);
-
-        EventHandler.trigger(_this4._element, Event$b.HIDDEN);
-      };
-
-      this._element.classList.remove(ClassName$a.SHOW);
-
-      if (this._config.animation) {
-        var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler.one(this._element, TRANSITION_END, complete);
-        emulateTransitionEnd(this._element, transitionDuration);
-      } else {
-        complete();
-      }
     } // Static
     ;
 

@@ -434,7 +434,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): dom/eventHandler.js
+   * Bootstrap (v4.3.1): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -522,10 +522,8 @@
       delegationSelector = null;
     }
 
-    var uidList = Object.keys(events);
-
-    for (var i = 0; i < uidList.length; i++) {
-      var uid = uidList[i];
+    for (var _i = 0, _Object$keys = Object.keys(events); _i < _Object$keys.length; _i++) {
+      var uid = _Object$keys[_i];
       var event = events[uid];
 
       if (event.originalHandler === handler && event.delegationSelector === delegationSelector) {
@@ -727,7 +725,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): dom/selectorEngine.js
+   * Bootstrap (v4.3.1): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1477,7 +1475,8 @@
         return;
       }
 
-      var direction = absDeltax / this.touchDeltaX; // swipe left
+      var direction = absDeltax / this.touchDeltaX;
+      this.touchDeltaX = 0; // swipe left
 
       if (direction > 0) {
         this.prev();
@@ -2304,7 +2303,7 @@
 
   /**!
    * @fileOverview Kickass library to create and place poppers near their reference elements.
-   * @version 1.14.7
+   * @version 1.15.0
    * @license
    * Copyright (c) 2016 Federico Zivolo and contributors
    *
@@ -3908,7 +3907,14 @@
 
       // flip the variation if required
       var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
-      var flippedVariation = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
+
+      // flips variation if reference element overflows boundaries
+      var flippedVariationByRef = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
+
+      // flips variation if popper content overflows boundaries
+      var flippedVariationByContent = !!options.flipVariationsByContent && (isVertical && variation === 'start' && overflowsRight || isVertical && variation === 'end' && overflowsLeft || !isVertical && variation === 'start' && overflowsBottom || !isVertical && variation === 'end' && overflowsTop);
+
+      var flippedVariation = flippedVariationByRef || flippedVariationByContent;
 
       if (overlapsRef || overflowsBoundaries || flippedVariation) {
         // this boolean to detect any flip loop
@@ -4515,7 +4521,23 @@
        * The popper will never be placed outside of the defined boundaries
        * (except if `keepTogether` is enabled)
        */
-      boundariesElement: 'viewport'
+      boundariesElement: 'viewport',
+      /**
+       * @prop {Boolean} flipVariations=false
+       * The popper will switch placement variation between `-start` and `-end` when
+       * the reference element overlaps its boundaries.
+       *
+       * The original placement should have a set variation.
+       */
+      flipVariations: false,
+      /**
+       * @prop {Boolean} flipVariationsByContent=false
+       * The popper will switch placement variation between `-start` and `-end` when
+       * the popper element overlaps its reference boundaries.
+       *
+       * The original placement should have a set variation.
+       */
+      flipVariationsByContent: false
     },
 
     /**
@@ -4732,8 +4754,8 @@
     /**
      * Creates a new Popper.js instance.
      * @class Popper
-     * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
-     * @param {HTMLElement} popper - The HTML element used as the popper
+     * @param {Element|referenceObject} reference - The reference element used to position the popper
+     * @param {Element} popper - The HTML / XML element used as the popper
      * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
      * @return {Object} instance - The generated Popper.js instance
      */
@@ -7723,7 +7745,9 @@
         EventHandler.trigger(_this._element, Event$b.SHOWN);
 
         if (_this._config.autohide) {
-          _this.hide();
+          _this._timeout = setTimeout(function () {
+            _this.hide();
+          }, _this._config.delay);
         }
       };
 
@@ -7740,7 +7764,7 @@
       }
     };
 
-    _proto.hide = function hide(withoutTimeout) {
+    _proto.hide = function hide() {
       var _this2 = this;
 
       if (!this._element.classList.contains(ClassName$a.SHOW)) {
@@ -7749,12 +7773,20 @@
 
       EventHandler.trigger(this._element, Event$b.HIDE);
 
-      if (withoutTimeout) {
-        this._close();
+      var complete = function complete() {
+        _this2._element.classList.add(ClassName$a.HIDE);
+
+        EventHandler.trigger(_this2._element, Event$b.HIDDEN);
+      };
+
+      this._element.classList.remove(ClassName$a.SHOW);
+
+      if (this._config.animation) {
+        var transitionDuration = getTransitionDurationFromElement(this._element);
+        EventHandler.one(this._element, TRANSITION_END, complete);
+        emulateTransitionEnd(this._element, transitionDuration);
       } else {
-        this._timeout = setTimeout(function () {
-          _this2._close();
-        }, this._config.delay);
+        complete();
       }
     };
 
@@ -7783,28 +7815,8 @@
       var _this3 = this;
 
       EventHandler.on(this._element, Event$b.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
-        return _this3.hide(true);
+        return _this3.hide();
       });
-    };
-
-    _proto._close = function _close() {
-      var _this4 = this;
-
-      var complete = function complete() {
-        _this4._element.classList.add(ClassName$a.HIDE);
-
-        EventHandler.trigger(_this4._element, Event$b.HIDDEN);
-      };
-
-      this._element.classList.remove(ClassName$a.SHOW);
-
-      if (this._config.animation) {
-        var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler.one(this._element, TRANSITION_END, complete);
-        emulateTransitionEnd(this._element, transitionDuration);
-      } else {
-        complete();
-      }
     } // Static
     ;
 

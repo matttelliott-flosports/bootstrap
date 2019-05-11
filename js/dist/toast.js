@@ -4,8 +4,8 @@
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/eventHandler.js'), require('./dom/manipulator.js')) :
-  typeof define === 'function' && define.amd ? define(['./dom/data.js', './dom/eventHandler.js', './dom/manipulator.js'], factory) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/manipulator.js')) :
+  typeof define === 'function' && define.amd ? define(['./dom/data.js', './dom/event-handler.js', './dom/manipulator.js'], factory) :
   (global = global || self, global.Toast = factory(global.Data, global.EventHandler, global.Manipulator));
 }(this, function (Data, EventHandler, Manipulator) { 'use strict';
 
@@ -218,7 +218,9 @@
         EventHandler.trigger(_this._element, Event.SHOWN);
 
         if (_this._config.autohide) {
-          _this.hide();
+          _this._timeout = setTimeout(function () {
+            _this.hide();
+          }, _this._config.delay);
         }
       };
 
@@ -235,7 +237,7 @@
       }
     };
 
-    _proto.hide = function hide(withoutTimeout) {
+    _proto.hide = function hide() {
       var _this2 = this;
 
       if (!this._element.classList.contains(ClassName.SHOW)) {
@@ -244,12 +246,20 @@
 
       EventHandler.trigger(this._element, Event.HIDE);
 
-      if (withoutTimeout) {
-        this._close();
+      var complete = function complete() {
+        _this2._element.classList.add(ClassName.HIDE);
+
+        EventHandler.trigger(_this2._element, Event.HIDDEN);
+      };
+
+      this._element.classList.remove(ClassName.SHOW);
+
+      if (this._config.animation) {
+        var transitionDuration = getTransitionDurationFromElement(this._element);
+        EventHandler.one(this._element, TRANSITION_END, complete);
+        emulateTransitionEnd(this._element, transitionDuration);
       } else {
-        this._timeout = setTimeout(function () {
-          _this2._close();
-        }, this._config.delay);
+        complete();
       }
     };
 
@@ -278,28 +288,8 @@
       var _this3 = this;
 
       EventHandler.on(this._element, Event.CLICK_DISMISS, Selector.DATA_DISMISS, function () {
-        return _this3.hide(true);
+        return _this3.hide();
       });
-    };
-
-    _proto._close = function _close() {
-      var _this4 = this;
-
-      var complete = function complete() {
-        _this4._element.classList.add(ClassName.HIDE);
-
-        EventHandler.trigger(_this4._element, Event.HIDDEN);
-      };
-
-      this._element.classList.remove(ClassName.SHOW);
-
-      if (this._config.animation) {
-        var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler.one(this._element, TRANSITION_END, complete);
-        emulateTransitionEnd(this._element, transitionDuration);
-      } else {
-        complete();
-      }
     } // Static
     ;
 
