@@ -5,9 +5,7 @@
     <h3>Installation</h3>
     <p>Include Bootstrap’s source Sass and JavaScript files via npm, Composer or Meteor. Package managed installs don’t include documentation, but do include our build system and readme.</p>
 
-    {{ highlight "npm install bootstrap" "sh" "" }}
-
-    {{ highlight (printf ("gem install bootstrap -v %s") .Site.Params.current_ruby_version) "sh" "" }}
+    {{ highlight "npm install git+https://git@github.com/matttelliott-flosports/bootstrap" "sh" "" }}
 
     <hr class="half-rule">
     <a class="btn btn-outline-primary" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read installation docs</a>
