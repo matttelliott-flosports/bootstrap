@@ -52,7 +52,7 @@ Pull in Bootstrap's **source files** into nearly any project with some of the mo
 Install Bootstrap in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/bootstrap):
 
 {{< highlight sh >}}
-npm install bootstrap
+npm install git+https://git@github.com/matttelliott-flosports/bootstrap
 {{< /highlight >}}
 
 `const bootstrap = require('bootstrap')` or `import bootstrap from 'bootstrap'` will load all of Bootstrap's plugins onto a `bootstrap` object.
