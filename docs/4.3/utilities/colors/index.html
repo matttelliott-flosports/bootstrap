@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.">
+<meta name="author" content="FloSports, Inc">
+<meta name="generator" content="Hugo 0.55.4">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.3">
+
+<title>Colors · FloSports - Bootstrap</title>
+
+<link rel="canonical" href="https://bootstrap.flosports.tv/docs/4.3/utilities/colors/">
+
+
+
+<!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+<link href="/docs/4.3/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+  </head>
+  <body>
+    <a class="skippy sr-only sr-only-focusable" href="#content">
+  <span class="skippy-text">Skip to main content</span>
+</a>
+
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-black fixed-top">
+  <a class="navbar-brand mr-0 mr-md-2 svg-primary" style="width:36px" href="/" aria-label="Bootstrap">
+    <svg viewBox="0 0 24 24" version="1.1">
+  <path d="M0,0 L0,24 L24,24 L24,0 L0,0 Z M22.5666667,1.43333333 L22.5666667,15.7666667 C20.6666667,17.9333333 18.0166667,19.2833333 15.5,19.6 C10.3666667,20.25 7.95,16.1833333 7.95,13.5 C7.96666667,10.6333333 9.58333333,9.11666667 11.6666667,8.95 C13.75,8.78333333 14.4666667,10.8833333 14.4666667,10.4166667 C14.4666667,9.81666667 13.9666667,4.16666667 7.33333333,4.85 C4.91666667,5.1 2.93333333,6.06666667 1.43333333,7.45 L1.43333333,1.43333333 L22.5666667,1.43333333 Z"></path>
+</svg>
+
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.3/getting-started/introduction/">Documentation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/docs/4.3/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Themes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://expo.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Expo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://flodogs.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
+        v4.3
+      </a>
+      <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item active" href="/docs/4.3/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.2/">v4.2.1</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/">v4.0.0</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3.7</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/docs/versions/">All versions</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/matttelliott-flosports/bootstrap" target="_blank" rel="noopener" aria-label="flo-bootstrap" name="flo-bootstrap" title="flo-bootstrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg text-flocheer" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/flocasts/flo-angular" target="_blank" rel="noopener" aria-label="flo-angular" name="flo-angular" title="flo-angular">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg text-floracing" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2 text-flobikes" href="https://flocasts.atlassian.net/secure/Dashboard.jspa" target="_blank" rel="noopener" aria-label="GitHub">
+        JIRA
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2 text-flogymnastics" href="" target="_blank" rel="noopener" aria-label="GitHub">
+        Confluence
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2 text-flowrestling" href="https://app.zeplin.io/organization/5ad0aa6b1f6e994b2a8ad005/projects" target="_blank" rel="noopener" aria-label="GitHub">
+        Zepplin
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Slack" href="https://flosports.slack.com/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg text-flograppling" viewBox="0 0 512 512" role="img"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"/></svg>
+      </a>
+    </li>
+  </ul>
+
+  <a class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.3/getting-started/download/">Download</a>
+</header>
+
+
+    <div class="container-fluid mt-5">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.3">
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
+
+<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/getting-started/introduction/">Getting started</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/layout/overview/">Layout</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/content/reboot/">Content</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/components/alerts/">Components</a>
+      </div>
+
+    <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.3/utilities/borders/">Utilities</a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.3/utilities/borders/">Borders</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/clearfix/">Clearfix</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/close-icon/">Close icon</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/click-toggle/">Click toggle</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.3/utilities/colors/">Colors</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/display/">Display</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/embed/">Embed</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/flex/">Flex</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/float/">Float</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/hover/">Hover</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/overflow/">Overflow</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/position/">Position</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/pointer-events/">Pointer events</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/screen-readers/">Screen readers</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/shadows/">Shadows</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/sizing/">Sizing</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/spacing/">Spacing</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/stretched-link/">Stretched link</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/text/">Text</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/tint/">Tint</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/vertical-align/">Vertical align</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/visibility/">Visibility</a>
+            </li>
+        </ul>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/extend/approach/">Extend</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/migration/">Migration</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/about/overview/">About</a>
+      </div>
+</nav>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#color">Color</a></li>
+<li><a href="#background-color">Background color</a></li>
+<li><a href="#background-gradient">Background gradient</a></li>
+</ul></li>
+</ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Colors</h1>
+          <p class="bd-lead">Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.</p>
+          
+
+<h2 id="color">Color</h2>
+
+<div class="bd-example">
+
+<p class="text-primary">.text-primary</p>
+<p class="text-secondary">.text-secondary</p>
+<p class="text-success">.text-success</p>
+<p class="text-danger">.text-danger</p>
+<p class="text-warning">.text-warning</p>
+<p class="text-info">.text-info</p>
+<p class="text-light bg-dark">.text-light</p>
+<p class="text-dark">.text-dark</p>
+<p class="text-white">.text-white</p>
+<p class="text-black">.text-black</p>
+<p class="text-tint">.text-tint</p>
+<p class="text-flosoftball">.text-flosoftball</p>
+<p class="text-flofc">.text-flofc</p>
+<p class="text-florugby">.text-florugby</p>
+<p class="text-flocombat">.text-flocombat</p>
+<p class="text-flograppling">.text-flograppling</p>
+<p class="text-flovolleyball">.text-flovolleyball</p>
+<p class="text-flomarching">.text-flomarching</p>
+<p class="text-flogymnastics">.text-flogymnastics</p>
+<p class="text-varsity">.text-varsity</p>
+<p class="text-floswimming">.text-floswimming</p>
+<p class="text-flohockey">.text-flohockey</p>
+<p class="text-florodeo">.text-florodeo</p>
+<p class="text-flovoice">.text-flovoice</p>
+<p class="text-flowrestling">.text-flowrestling</p>
+<p class="text-flocheer">.text-flocheer</p>
+<p class="text-milesplit">.text-milesplit</p>
+<p class="text-flotrack">.text-flotrack</p>
+<p class="text-floracing">.text-floracing</p>
+<p class="text-flofootball">.text-flofootball</p>
+<p class="text-flobowling">.text-flobowling</p>
+<p class="text-flodogs">.text-flodogs</p>
+<p class="text-floelite">.text-floelite</p>
+<p class="text-flohoops">.text-flohoops</p>
+<p class="text-flolive">.text-flolive</p>
+<p class="text-flodance">.text-flodance</p>
+<p class="text-flobikes">.text-flobikes</p>
+<p class="text-body">.text-body</p>
+<p class="text-muted">.text-muted</p>
+<p class="text-white bg-dark">.text-white</p>
+<p class="text-black-50">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-white-50</p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary&#34;</span><span class="p">&gt;</span>.text-primary<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-secondary&#34;</span><span class="p">&gt;</span>.text-secondary<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-success&#34;</span><span class="p">&gt;</span>.text-success<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>.text-danger<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-warning&#34;</span><span class="p">&gt;</span>.text-warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-info&#34;</span><span class="p">&gt;</span>.text-info<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-light bg-dark&#34;</span><span class="p">&gt;</span>.text-light<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark&#34;</span><span class="p">&gt;</span>.text-dark<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white&#34;</span><span class="p">&gt;</span>.text-white<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-black&#34;</span><span class="p">&gt;</span>.text-black<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-tint&#34;</span><span class="p">&gt;</span>.text-tint<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flosoftball&#34;</span><span class="p">&gt;</span>.text-flosoftball<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flofc&#34;</span><span class="p">&gt;</span>.text-flofc<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-florugby&#34;</span><span class="p">&gt;</span>.text-florugby<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flocombat&#34;</span><span class="p">&gt;</span>.text-flocombat<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flograppling&#34;</span><span class="p">&gt;</span>.text-flograppling<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flovolleyball&#34;</span><span class="p">&gt;</span>.text-flovolleyball<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flomarching&#34;</span><span class="p">&gt;</span>.text-flomarching<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flogymnastics&#34;</span><span class="p">&gt;</span>.text-flogymnastics<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-varsity&#34;</span><span class="p">&gt;</span>.text-varsity<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-floswimming&#34;</span><span class="p">&gt;</span>.text-floswimming<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flohockey&#34;</span><span class="p">&gt;</span>.text-flohockey<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-florodeo&#34;</span><span class="p">&gt;</span>.text-florodeo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flovoice&#34;</span><span class="p">&gt;</span>.text-flovoice<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flowrestling&#34;</span><span class="p">&gt;</span>.text-flowrestling<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flocheer&#34;</span><span class="p">&gt;</span>.text-flocheer<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-milesplit&#34;</span><span class="p">&gt;</span>.text-milesplit<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flotrack&#34;</span><span class="p">&gt;</span>.text-flotrack<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-floracing&#34;</span><span class="p">&gt;</span>.text-floracing<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flofootball&#34;</span><span class="p">&gt;</span>.text-flofootball<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flobowling&#34;</span><span class="p">&gt;</span>.text-flobowling<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flodogs&#34;</span><span class="p">&gt;</span>.text-flodogs<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-floelite&#34;</span><span class="p">&gt;</span>.text-floelite<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flohoops&#34;</span><span class="p">&gt;</span>.text-flohoops<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flolive&#34;</span><span class="p">&gt;</span>.text-flolive<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flodance&#34;</span><span class="p">&gt;</span>.text-flodance<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flobikes&#34;</span><span class="p">&gt;</span>.text-flobikes<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-body&#34;</span><span class="p">&gt;</span>.text-body<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-muted&#34;</span><span class="p">&gt;</span>.text-muted<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white bg-dark&#34;</span><span class="p">&gt;</span>.text-white<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-black-50&#34;</span><span class="p">&gt;</span>.text-black-50<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white-50 bg-dark&#34;</span><span class="p">&gt;</span>.text-white-50<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+
+<p>Contextual text classes also work well on anchors with the provided hover and focus states. <strong>Note that the <code>.text-white</code> and <code>.text-muted</code> class has no additional link styling beyond underline.</strong></p>
+
+<div class="bd-example">
+
+<p><a href="#" class="text-primary">Primary link</a></p>
+<p><a href="#" class="text-secondary">Secondary link</a></p>
+<p><a href="#" class="text-success">Success link</a></p>
+<p><a href="#" class="text-danger">Danger link</a></p>
+<p><a href="#" class="text-warning">Warning link</a></p>
+<p><a href="#" class="text-info">Info link</a></p>
+<p><a href="#" class="text-light bg-dark">Light link</a></p>
+<p><a href="#" class="text-dark">Dark link</a></p>
+<p><a href="#" class="text-white">White link</a></p>
+<p><a href="#" class="text-black">Black link</a></p>
+<p><a href="#" class="text-tint">Tint link</a></p>
+<p><a href="#" class="text-flosoftball">Flosoftball link</a></p>
+<p><a href="#" class="text-flofc">Flofc link</a></p>
+<p><a href="#" class="text-florugby">Florugby link</a></p>
+<p><a href="#" class="text-flocombat">Flocombat link</a></p>
+<p><a href="#" class="text-flograppling">Flograppling link</a></p>
+<p><a href="#" class="text-flovolleyball">Flovolleyball link</a></p>
+<p><a href="#" class="text-flomarching">Flomarching link</a></p>
+<p><a href="#" class="text-flogymnastics">Flogymnastics link</a></p>
+<p><a href="#" class="text-varsity">Varsity link</a></p>
+<p><a href="#" class="text-floswimming">Floswimming link</a></p>
+<p><a href="#" class="text-flohockey">Flohockey link</a></p>
+<p><a href="#" class="text-florodeo">Florodeo link</a></p>
+<p><a href="#" class="text-flovoice">Flovoice link</a></p>
+<p><a href="#" class="text-flowrestling">Flowrestling link</a></p>
+<p><a href="#" class="text-flocheer">Flocheer link</a></p>
+<p><a href="#" class="text-milesplit">Milesplit link</a></p>
+<p><a href="#" class="text-flotrack">Flotrack link</a></p>
+<p><a href="#" class="text-floracing">Floracing link</a></p>
+<p><a href="#" class="text-flofootball">Flofootball link</a></p>
+<p><a href="#" class="text-flobowling">Flobowling link</a></p>
+<p><a href="#" class="text-flodogs">Flodogs link</a></p>
+<p><a href="#" class="text-floelite">Floelite link</a></p>
+<p><a href="#" class="text-flohoops">Flohoops link</a></p>
+<p><a href="#" class="text-flolive">Flolive link</a></p>
+<p><a href="#" class="text-flodance">Flodance link</a></p>
+<p><a href="#" class="text-flobikes">Flobikes link</a></p>
+<p><a href="#" class="text-muted">Muted link</a></p>
+<p><a href="#" class="text-white bg-dark">White link</a></p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary&#34;</span><span class="p">&gt;</span>Primary link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-secondary&#34;</span><span class="p">&gt;</span>Secondary link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-success&#34;</span><span class="p">&gt;</span>Success link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>Danger link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-warning&#34;</span><span class="p">&gt;</span>Warning link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-info&#34;</span><span class="p">&gt;</span>Info link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-light bg-dark&#34;</span><span class="p">&gt;</span>Light link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark&#34;</span><span class="p">&gt;</span>Dark link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white&#34;</span><span class="p">&gt;</span>White link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-black&#34;</span><span class="p">&gt;</span>Black link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-tint&#34;</span><span class="p">&gt;</span>Tint link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flosoftball&#34;</span><span class="p">&gt;</span>Flosoftball link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flofc&#34;</span><span class="p">&gt;</span>Flofc link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-florugby&#34;</span><span class="p">&gt;</span>Florugby link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flocombat&#34;</span><span class="p">&gt;</span>Flocombat link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flograppling&#34;</span><span class="p">&gt;</span>Flograppling link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flovolleyball&#34;</span><span class="p">&gt;</span>Flovolleyball link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flomarching&#34;</span><span class="p">&gt;</span>Flomarching link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flogymnastics&#34;</span><span class="p">&gt;</span>Flogymnastics link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-varsity&#34;</span><span class="p">&gt;</span>Varsity link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-floswimming&#34;</span><span class="p">&gt;</span>Floswimming link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flohockey&#34;</span><span class="p">&gt;</span>Flohockey link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-florodeo&#34;</span><span class="p">&gt;</span>Florodeo link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flovoice&#34;</span><span class="p">&gt;</span>Flovoice link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flowrestling&#34;</span><span class="p">&gt;</span>Flowrestling link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flocheer&#34;</span><span class="p">&gt;</span>Flocheer link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-milesplit&#34;</span><span class="p">&gt;</span>Milesplit link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flotrack&#34;</span><span class="p">&gt;</span>Flotrack link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-floracing&#34;</span><span class="p">&gt;</span>Floracing link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flofootball&#34;</span><span class="p">&gt;</span>Flofootball link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flobowling&#34;</span><span class="p">&gt;</span>Flobowling link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flodogs&#34;</span><span class="p">&gt;</span>Flodogs link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-floelite&#34;</span><span class="p">&gt;</span>Floelite link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flohoops&#34;</span><span class="p">&gt;</span>Flohoops link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flolive&#34;</span><span class="p">&gt;</span>Flolive link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flodance&#34;</span><span class="p">&gt;</span>Flodance link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-flobikes&#34;</span><span class="p">&gt;</span>Flobikes link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-muted&#34;</span><span class="p">&gt;</span>Muted link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white bg-dark&#34;</span><span class="p">&gt;</span>White link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+
+<h2 id="background-color">Background color</h2>
+
+<p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Background utilities <strong>do not set <code>color</code></strong>, so in some cases you&rsquo;ll want to use <code>.text-*</code> utilities.</p>
+
+<div class="bd-example">
+
+<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+<div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+<div class="p-3 mb-2 bg-white text-white">.bg-white</div>
+<div class="p-3 mb-2 bg-black text-white">.bg-black</div>
+<div class="p-3 mb-2 bg-tint text-white">.bg-tint</div>
+<div class="p-3 mb-2 bg-flosoftball text-white">.bg-flosoftball</div>
+<div class="p-3 mb-2 bg-flofc text-white">.bg-flofc</div>
+<div class="p-3 mb-2 bg-florugby text-white">.bg-florugby</div>
+<div class="p-3 mb-2 bg-flocombat text-white">.bg-flocombat</div>
+<div class="p-3 mb-2 bg-flograppling text-white">.bg-flograppling</div>
+<div class="p-3 mb-2 bg-flovolleyball text-white">.bg-flovolleyball</div>
+<div class="p-3 mb-2 bg-flomarching text-white">.bg-flomarching</div>
+<div class="p-3 mb-2 bg-flogymnastics text-white">.bg-flogymnastics</div>
+<div class="p-3 mb-2 bg-varsity text-white">.bg-varsity</div>
+<div class="p-3 mb-2 bg-floswimming text-white">.bg-floswimming</div>
+<div class="p-3 mb-2 bg-flohockey text-white">.bg-flohockey</div>
+<div class="p-3 mb-2 bg-florodeo text-white">.bg-florodeo</div>
+<div class="p-3 mb-2 bg-flovoice text-white">.bg-flovoice</div>
+<div class="p-3 mb-2 bg-flowrestling text-white">.bg-flowrestling</div>
+<div class="p-3 mb-2 bg-flocheer text-white">.bg-flocheer</div>
+<div class="p-3 mb-2 bg-milesplit text-white">.bg-milesplit</div>
+<div class="p-3 mb-2 bg-flotrack text-white">.bg-flotrack</div>
+<div class="p-3 mb-2 bg-floracing text-white">.bg-floracing</div>
+<div class="p-3 mb-2 bg-flofootball text-white">.bg-flofootball</div>
+<div class="p-3 mb-2 bg-flobowling text-white">.bg-flobowling</div>
+<div class="p-3 mb-2 bg-flodogs text-white">.bg-flodogs</div>
+<div class="p-3 mb-2 bg-floelite text-white">.bg-floelite</div>
+<div class="p-3 mb-2 bg-flohoops text-white">.bg-flohoops</div>
+<div class="p-3 mb-2 bg-flolive text-white">.bg-flolive</div>
+<div class="p-3 mb-2 bg-flodance text-white">.bg-flodance</div>
+<div class="p-3 mb-2 bg-flobikes text-white">.bg-flobikes</div>
+<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-primary text-white&#34;</span><span class="p">&gt;</span>.bg-primary<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-secondary text-white&#34;</span><span class="p">&gt;</span>.bg-secondary<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-success text-white&#34;</span><span class="p">&gt;</span>.bg-success<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-danger text-white&#34;</span><span class="p">&gt;</span>.bg-danger<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-warning text-dark&#34;</span><span class="p">&gt;</span>.bg-warning<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-info text-white&#34;</span><span class="p">&gt;</span>.bg-info<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-light text-dark&#34;</span><span class="p">&gt;</span>.bg-light<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-dark text-white&#34;</span><span class="p">&gt;</span>.bg-dark<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-white text-white&#34;</span><span class="p">&gt;</span>.bg-white<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-black text-white&#34;</span><span class="p">&gt;</span>.bg-black<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-tint text-white&#34;</span><span class="p">&gt;</span>.bg-tint<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flosoftball text-white&#34;</span><span class="p">&gt;</span>.bg-flosoftball<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flofc text-white&#34;</span><span class="p">&gt;</span>.bg-flofc<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-florugby text-white&#34;</span><span class="p">&gt;</span>.bg-florugby<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flocombat text-white&#34;</span><span class="p">&gt;</span>.bg-flocombat<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flograppling text-white&#34;</span><span class="p">&gt;</span>.bg-flograppling<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flovolleyball text-white&#34;</span><span class="p">&gt;</span>.bg-flovolleyball<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flomarching text-white&#34;</span><span class="p">&gt;</span>.bg-flomarching<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flogymnastics text-white&#34;</span><span class="p">&gt;</span>.bg-flogymnastics<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-varsity text-white&#34;</span><span class="p">&gt;</span>.bg-varsity<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-floswimming text-white&#34;</span><span class="p">&gt;</span>.bg-floswimming<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flohockey text-white&#34;</span><span class="p">&gt;</span>.bg-flohockey<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-florodeo text-white&#34;</span><span class="p">&gt;</span>.bg-florodeo<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flovoice text-white&#34;</span><span class="p">&gt;</span>.bg-flovoice<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flowrestling text-white&#34;</span><span class="p">&gt;</span>.bg-flowrestling<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flocheer text-white&#34;</span><span class="p">&gt;</span>.bg-flocheer<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-milesplit text-white&#34;</span><span class="p">&gt;</span>.bg-milesplit<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flotrack text-white&#34;</span><span class="p">&gt;</span>.bg-flotrack<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-floracing text-white&#34;</span><span class="p">&gt;</span>.bg-floracing<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flofootball text-white&#34;</span><span class="p">&gt;</span>.bg-flofootball<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flobowling text-white&#34;</span><span class="p">&gt;</span>.bg-flobowling<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flodogs text-white&#34;</span><span class="p">&gt;</span>.bg-flodogs<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-floelite text-white&#34;</span><span class="p">&gt;</span>.bg-floelite<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flohoops text-white&#34;</span><span class="p">&gt;</span>.bg-flohoops<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flolive text-white&#34;</span><span class="p">&gt;</span>.bg-flolive<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flodance text-white&#34;</span><span class="p">&gt;</span>.bg-flodance<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-flobikes text-white&#34;</span><span class="p">&gt;</span>.bg-flobikes<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-white text-dark&#34;</span><span class="p">&gt;</span>.bg-white<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-transparent text-dark&#34;</span><span class="p">&gt;</span>.bg-transparent<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+
+<h2 id="background-gradient">Background gradient</h2>
+
+<p>When <code>$enable-gradients</code> is set to <code>true</code> (default is <code>false</code>), you can use <code>.bg-gradient-</code> utility classes. <a href="/docs/4.3/getting-started/theming/#sass-options">Learn about our Sass options</a> to enable these classes and more.</p>
+
+<ul>
+<li><code>.bg-gradient-primary</code></li>
+<li><code>.bg-gradient-secondary</code></li>
+<li><code>.bg-gradient-success</code></li>
+<li><code>.bg-gradient-danger</code></li>
+<li><code>.bg-gradient-warning</code></li>
+<li><code>.bg-gradient-info</code></li>
+<li><code>.bg-gradient-light</code></li>
+<li><code>.bg-gradient-dark</code></li>
+<li><code>.bg-gradient-white</code></li>
+<li><code>.bg-gradient-black</code></li>
+<li><code>.bg-gradient-tint</code></li>
+<li><code>.bg-gradient-flosoftball</code></li>
+<li><code>.bg-gradient-flofc</code></li>
+<li><code>.bg-gradient-florugby</code></li>
+<li><code>.bg-gradient-flocombat</code></li>
+<li><code>.bg-gradient-flograppling</code></li>
+<li><code>.bg-gradient-flovolleyball</code></li>
+<li><code>.bg-gradient-flomarching</code></li>
+<li><code>.bg-gradient-flogymnastics</code></li>
+<li><code>.bg-gradient-varsity</code></li>
+<li><code>.bg-gradient-floswimming</code></li>
+<li><code>.bg-gradient-flohockey</code></li>
+<li><code>.bg-gradient-florodeo</code></li>
+<li><code>.bg-gradient-flovoice</code></li>
+<li><code>.bg-gradient-flowrestling</code></li>
+<li><code>.bg-gradient-flocheer</code></li>
+<li><code>.bg-gradient-milesplit</code></li>
+<li><code>.bg-gradient-flotrack</code></li>
+<li><code>.bg-gradient-floracing</code></li>
+<li><code>.bg-gradient-flofootball</code></li>
+<li><code>.bg-gradient-flobowling</code></li>
+<li><code>.bg-gradient-flodogs</code></li>
+<li><code>.bg-gradient-floelite</code></li>
+<li><code>.bg-gradient-flohoops</code></li>
+<li><code>.bg-gradient-flolive</code></li>
+<li><code>.bg-gradient-flodance</code></li>
+<li><code>.bg-gradient-flobikes</code></li>
+</ul>
+
+<div class="bd-callout bd-callout-info">
+<h4 id="dealing-with-specificity">Dealing with specificity</h4>
+
+<p>Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element&rsquo;s content in a <code>&lt;div&gt;</code> with the class.
+</div>
+
+
+<div class="bd-callout bd-callout-info">
+<h5 id="conveying-meaning-to-assistive-technologies">Conveying meaning to assistive technologies</h5>
+
+<p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.
+</div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/docs/4.3/dist/js/bootstrap.bundle.js"></script> <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.3/assets/js/vendor/anchor.min.js"></script>
+<script src="/docs/4.3/assets/js/vendor/clipboard.min.js"></script>
+<script src="/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js"></script>
+<script src="/docs/4.3/assets/js/src/application.js"></script>
+<script src="/docs/4.3/assets/js/src/search.js"></script><script>
+  const params = new URL(document.location).searchParams
+  const site = params.get('site')
+  console.log(site)
+  const bodyElement = document.querySelector('body')
+  const primaryColor = window
+    .getComputedStyle(bodyElement)
+    .getPropertyValue(`--${site}`)
+  const styleElement = document.createElement('style')
+  if (site) {
+    const styles = `
+.btn-primary {
+  background-color: var(--${site});
+  border-color: var(--${site});
+}
+
+.btn-primary:hover {
+  border-color: var(--${site}-darken-10);
+}
+.btn-outline-primary {
+  color: var(--${site});
+  border-color: var(--${site});
+}
+
+.btn-outline-primary:hover {
+  border-color: var(--${site}-darken-10);
+}
+
+a:hover {
+  color: var(--${site});
+}
+
+.alert-primary {
+  color: var(--${site}-alert-color);
+  background-color: var(--${site}-alert-bg);
+  border-color: var(--${site}-alert-border);
+}
+
+.svg-primary,
+.svg-primary > svg,
+.svg-primary > svg path {
+  fill: var(--${site});
+}
+
+.bg-primary {
+  background-color: var(--${site}) !important;
+}
+
+.text-primary {
+  color: var(--${site}) !important;
+}
+
+input.tab-input:checked + label.tab-label {
+  border-bottom-color: var(--${site});
+}
+
+`
+    styleElement.innerText = styles
+    bodyElement.appendChild(styleElement)
+  }
+</script>
+
+<script>
+  function toggleIframe(element) {
+    const link = element.querySelector('a')
+    const iframeContainer = document.querySelector('.iframe-container')
+    console.log(iframeContainer)
+    iframeContainer.addClass('hidden')
+  }
+</script>
+
+
+  </body>
+</html>
