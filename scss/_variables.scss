@@ -418,7 +418,7 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        $header-font !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        700 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
@@ -830,7 +830,11 @@ $zindecies: map-merge(
 
 $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
+$nav-link-margin-y:                0 !default;
+$nav-link-margin-x:                0 !default;
 $nav-link-disabled-color:           $gray-600 !default;
+$nav-link-font-family:           $headings-font-family !default;
+$nav-link-font-weight:           500 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;

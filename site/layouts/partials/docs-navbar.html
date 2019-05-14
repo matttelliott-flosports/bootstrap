@@ -1,10 +1,11 @@
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-black position-sticky top z-sticky">
+<header class="navbar navbar-expand navbar-dark bg-black position-sticky top z-sticky">
+  <div class="container flex-column flex-lg-row">
   <a class="navbar-brand mr-0 mr-md-2 svg-primary" style="width:36px" href="/" aria-label="Bootstrap">
     {{ partial "icons/flosports.svg" (dict "class" "d-block" "width" "36" "height" "36") }}
   </a>
 
   <div class="navbar-nav-scroll">
-    <ul class="navbar-nav flex-row">
+    <ul class="navbar-nav flex-row text-uppercase">
       <li class="nav-item">
         <a class="nav-link{{ if .IsHome }} active{{ end }}" href="/">Home</a>
       </li>
@@ -26,7 +27,7 @@
     </ul>
   </div>
 
-  <ul class="navbar-nav ml-md-auto">
+  <ul class="navbar-nav ml-lg-auto">
 
     <li class="nav-item">
       <a class="nav-link p-2" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener" aria-label="flo-bootstrap" name="flo-bootstrap" title="flo-bootstrap">
@@ -59,4 +60,5 @@
       </a>
     </li>
   </ul>
+  </div>
 </header>

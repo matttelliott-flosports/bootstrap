@@ -292,7 +292,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Industry-Demi-Web", "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -6657,6 +6657,9 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  margin: 0 0;
+  font-family: "Industry-Demi-Web", "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -9762,33 +9765,6 @@ a.close.disabled {
   content: "";
 }
 
-.click-toggle-inline,
-.click-toggle-inline-block,
-.click-toggle-flex,
-.click-toggle-block {
-  display: none;
-}
-
-input[type="checkbox"].click-toggle-input:checked .click-toggle-block,
-input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-block {
-  display: block;
-}
-
-input[type="checkbox"].click-toggle-input:checked .click-toggle-flex,
-input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-flex {
-  display: flex;
-}
-
-input[type="checkbox"].click-toggle-input:checked .click-toggle-inline,
-input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline {
-  display: inline;
-}
-
-input[type="checkbox"].click-toggle-input:checked .click-toggle-inline-block,
-input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline-block {
-  display: inline-block;
-}
-
 .d-none {
   display: none !important;
 }
@@ -10632,33 +10608,6 @@ input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline-block {
   .float-xl-none {
     float: none !important;
   }
-}
-
-.hover-toggle-inline,
-.hover-toggle-inline-block,
-.hover-toggle-flex,
-.hover-toggle-block {
-  display: none;
-}
-
-.hover-target:hover .hover-toggle-block,
-.hover-target:hover ~ .hover-toggle-block {
-  display: block;
-}
-
-.hover-target:hover .hover-toggle-flex,
-.hover-target:hover ~ .hover-toggle-flex {
-  display: flex;
-}
-
-.hover-target:hover .hover-toggle-inline,
-.hover-target:hover ~ .hover-toggle-inline {
-  display: inline;
-}
-
-.hover-target:hover .hover-toggle-inline-block,
-.hover-target:hover ~ .hover-toggle-inline-block {
-  display: inline-block;
 }
 
 .overflow-auto {
@@ -13451,6 +13400,60 @@ a.svg-flofc:hover, a.svg-flofc:focus {
 
 .z-tooltip {
   z-index: 1070;
+}
+
+.click-toggle-inline,
+.click-toggle-inline-block,
+.click-toggle-flex,
+.click-toggle-block {
+  display: none;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-block,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-block {
+  display: block;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-flex,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-flex {
+  display: flex;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-inline,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline {
+  display: inline;
+}
+
+input[type="checkbox"].click-toggle-input:checked .click-toggle-inline-block,
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-inline-block {
+  display: inline-block;
+}
+
+.hover-toggle-inline,
+.hover-toggle-inline-block,
+.hover-toggle-flex,
+.hover-toggle-block {
+  display: none;
+}
+
+.hover-target:hover .hover-toggle-block,
+.hover-target:hover ~ .hover-toggle-block {
+  display: block;
+}
+
+.hover-target:hover .hover-toggle-flex,
+.hover-target:hover ~ .hover-toggle-flex {
+  display: flex;
+}
+
+.hover-target:hover .hover-toggle-inline,
+.hover-target:hover ~ .hover-toggle-inline {
+  display: inline;
+}
+
+.hover-target:hover .hover-toggle-inline-block,
+.hover-target:hover ~ .hover-toggle-inline-block {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

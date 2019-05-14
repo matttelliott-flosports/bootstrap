@@ -14,6 +14,9 @@
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
+  margin: $nav-link-margin-y $nav-link-margin-x;
+  font-family: $nav-link-font-family;
+  font-weight: $nav-link-font-weight;
 
   &:hover,
   &:focus {
