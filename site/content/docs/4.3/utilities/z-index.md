@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Visibility
-description: Control the visibility, without modifying the display, of elements with visibility utilities.
+title: Z-index (FloSports)
+description: Control the z-index of elements with utility classes.
 group: utilities
 ---
 
 Set the `z-index` of elements with our z-index utilities. It is generally
 recommended that these classes be used sparingly in applications as they create
-new [stacking contexts](1) which can lead to difficult situations in complex
+new **[stacking contexts][1]** which can lead to difficult situations in complex
 apps; restructuring html is usually prefered
 
 Apply `.z-$value`
@@ -54,4 +54,4 @@ $zindecies: map-merge(
 {{< /highlight >}}
 
 
-[1][https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context]
+[1]:https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context

@@ -87,6 +87,7 @@
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm run css-compile\"",
     "watch-css-docs": "nodemon --watch \"site/static/**/assets/scss/\" --ext scss --exec \"npm run css-docs\"",
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm run js-compile\"",
+    "push-pages": "git subtree push --prefix=_gh_pages origin gh-pages",
     "watch-js-docs": "nodemon --watch \"site/static/**/assets/js/src/\" --ext js --exec \"npm run js-docs\""
   },
   "style": "dist/css/bootstrap.css",
