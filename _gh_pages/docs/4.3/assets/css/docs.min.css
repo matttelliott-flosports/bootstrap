@@ -277,27 +277,33 @@ input.tab-input:checked + label.tab-label + .tab-content {
 }
 
 .bd-content > h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 @media (max-width: 1200px) {
   .bd-content > h2 {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(1.325rem + 0.9vw) ;
   }
 }
 
 .bd-content > h3 {
-  font-size: 1.3125rem;
+  font-size: 1.75rem;
 }
 
 @media (max-width: 1200px) {
   .bd-content > h3 {
-    font-size: calc(1.25625rem + 0.075vw) ;
+    font-size: calc(1.3rem + 0.6vw) ;
   }
 }
 
 .bd-content > h4 {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .bd-content > h4 {
+    font-size: calc(1.275rem + 0.3vw) ;
+  }
 }
 
 .bd-content > h2:not(:first-child) {
