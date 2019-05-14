@@ -91,10 +91,6 @@
 // Misc
 //
 
-.shout {
-  text-transform: uppercase;
-}
-
 // Builds on `abbr`
 .initialism {
   @include font-size(90%);

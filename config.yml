@@ -39,7 +39,7 @@ params:
   floangular:           "https://github.com/flocasts/flo-angular"
   twitter:              "flosports"
   slack:                "https://flosports.slack.com"
-  zepplin:              "https://app.zeplin.io/organization/5ad0aa6b1f6e994b2a8ad005/projects"
+  zeplin:              "https://app.zeplin.io/organization/5ad0aa6b1f6e994b2a8ad005/projects"
   blog:                 "https://flodogs.com"
   jira:                 "https://flocasts.atlassian.net/wiki"
   jira:                 "https://flocasts.atlassian.net/secure/Dashboard.jspa"

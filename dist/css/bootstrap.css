@@ -691,10 +691,6 @@ template {
   margin-right: 0.5rem;
 }
 
-.shout {
-  text-transform: uppercase;
-}
-
 .initialism {
   font-size: 90%;
   text-transform: uppercase;

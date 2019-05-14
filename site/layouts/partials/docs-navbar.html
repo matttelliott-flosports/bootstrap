@@ -27,27 +27,10 @@
   </div>
 
   <ul class="navbar-nav ml-md-auto">
-    <li class="nav-item dropdown">
-      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
-        v{{ .Site.Params.docs_version }}
-      </a>
-      <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
-        <a class="dropdown-item active" href="/docs/{{ .Site.Params.docs_version }}/">Latest (4.3.x)</a>
-        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.2/">v4.2.1</a>
-        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/">v4.0.0</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
-        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a>
-        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3.7</a>
-        <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="/docs/versions/">All versions</a>
-      </div>
-    </li>
 
     <li class="nav-item">
       <a class="nav-link p-2" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener" aria-label="flo-bootstrap" name="flo-bootstrap" title="flo-bootstrap">
-        {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg text-flocheer" "width" "36" "height" "36") }}
+        {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg text-flograppling" "width" "36" "height" "36") }}
       </a>
     </li>
     <li class="nav-item">
@@ -56,26 +39,24 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link p-2 text-flobikes" href="{{ .Site.Params.jira }}" target="_blank" rel="noopener" aria-label="GitHub">
-        JIRA
+      <a class="nav-link p-2" href="{{ .Site.Params.jira }}" target="_blank" rel="noopener" aria-label="jira" name="jira" title="jira">
+        {{ partial "icons/jira.svg" (dict "class" "navbar-nav-svg text-flobikes" "width" "36" "height" "36") }}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link p-2 text-flogymnastics" href="{{ .Site.Params.confluence }}" target="_blank" rel="noopener" aria-label="GitHub">
-        Confluence
+      <a class="nav-link p-2" href="{{ .Site.Params.confluence }}" target="_blank" rel="noopener" aria-label="confluence" name="confluence" title="confluence">
+        {{ partial "icons/confluence.svg" (dict "class" "navbar-nav-svg text-flogymnastics" "width" "36" "height" "36") }}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link p-2 text-flowrestling" href="{{ .Site.Params.zepplin }}" target="_blank" rel="noopener" aria-label="GitHub">
-        Zepplin
+      <a class="nav-link p-2" href="{{ .Site.Params.zeplin }}" target="_blank" rel="noopener" aria-label="zeplin" name="zeplin" title="zeplin">
+        {{ partial "icons/zeplin.svg" (dict "class" "navbar-nav-svg text-flowrestling" "width" "36" "height" "36") }}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Slack" href="{{ .Site.Params.slack }}/" >
-        {{ partial "icons/slack.svg" (dict "class" "navbar-nav-svg text-flograppling" "width" "36" "height" "36") }}
+      <a class="nav-link p-2" target="_blank" rel="noopener" aria-label="Slack" href="{{ .Site.Params.slack }}/"  name="slack" title="slack">
+        {{ partial "icons/slack.svg" (dict "class" "navbar-nav-svg text-flocheer" "width" "36" "height" "36") }}
       </a>
     </li>
   </ul>
-
-  <a class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Download</a>
 </header>
