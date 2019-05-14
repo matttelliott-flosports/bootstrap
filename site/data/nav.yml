@@ -35,10 +35,12 @@
     - title: Button group
     - title: Card
     - title: Carousel
+    - title: Click toggle
     - title: Close icon
     - title: Collapse
     - title: Dropdowns
     - title: Forms
+    - title: Hover
     - title: Input group
     - title: Jumbotron
     - title: List group
@@ -59,13 +61,11 @@
     - title: Borders
     - title: Clearfix
     - title: Close icon
-    - title: Click toggle
     - title: Colors
     - title: Display
     - title: Embed
     - title: Flex
     - title: Float
-    - title: Hover
     - title: Overflow
     - title: Position
     - title: Pointer events
