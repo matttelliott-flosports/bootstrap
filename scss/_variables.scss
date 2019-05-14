@@ -796,14 +796,35 @@ $form-validation-states: map-merge(
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
-$zindex-dropdown:                   1000 !default;
-$zindex-sticky:                     1020 !default;
-$zindex-fixed:                      1030 !default;
-$zindex-modal-backdrop:             1040 !default;
-$zindex-modal:                      1050 !default;
-$zindex-popover:                    1060 !default;
-$zindex-tooltip:                    1070 !default;
+$zindex-hover:          1 !default;
+$zindex-focus:          2 !default;
+$zindex-active:         3 !default;
+$zindex-dropdown:       1000 !default;
+$zindex-sticky:         1020 !default;
+$zindex-fixed:          1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal:          1050 !default;
+$zindex-popover:        1060 !default;
+$zindex-tooltip:        1070 !default;
 
+
+$zindecies: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$zindecies: map-merge(
+  (
+    "hover":   $zindex-hover,
+    "focus":     $zindex-focus,
+    "active":     $zindex-active,
+    "dropdown":   $zindex-dropdown,
+    "sticky":     $zindex-sticky,
+    "fixed":     $zindex-fixed,
+    "modal-backdrop":       $zindex-modal-backdrop,
+    "modal":        $zindex-modal,
+    "popover":     $zindex-popover,
+    "tooltip":     $zindex-tooltip,
+  ),
+  $zindecies
+);
 
 // Navs
 

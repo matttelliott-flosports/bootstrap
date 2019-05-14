@@ -13405,4 +13405,44 @@ a.svg-flofc:hover, a.svg-flofc:focus {
   visibility: hidden !important;
 }
 
+.z-hover {
+  z-index: 1;
+}
+
+.z-focus {
+  z-index: 2;
+}
+
+.z-active {
+  z-index: 3;
+}
+
+.z-dropdown {
+  z-index: 1000;
+}
+
+.z-sticky {
+  z-index: 1020;
+}
+
+.z-fixed {
+  z-index: 1030;
+}
+
+.z-modal-backdrop {
+  z-index: 1040;
+}
+
+.z-modal {
+  z-index: 1050;
+}
+
+.z-popover {
+  z-index: 1060;
+}
+
+.z-tooltip {
+  z-index: 1070;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
